@@ -6,6 +6,7 @@ import {styles} from '../styles';
 import {services} from '../constants';
 import {fadeIn, textVariant} from '../utils/motion';
 import { SectionWrapper } from '../hoc';
+import { logo } from '../assets';
 
 const ServiceCard = ({index, title, icon}) =>{
   return(
@@ -33,11 +34,7 @@ const About = () => {
     gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg
       </motion.p>
 
-      <div className='mt-20 flex flex-wrap gap-10'>
-        {services.map((service, index) => (
-          <ServiceCard key={service.title} index={index} {...service} />
-        ))}
-      </div>
+      <img src={logo} />
     </>
   )
 }
